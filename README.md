@@ -11,6 +11,7 @@ Customer segmentation is a key strategy in marketing and data analytics. It allo
 This project implements:
 - **Data Preprocessing**
 - **Exploratory Data Analysis (EDA)**
+- **Fuzzy Matching for Locations**
 - **K-Means Clustering**
 - **Cluster Visualization**
 - **Business Insights**
@@ -24,7 +25,8 @@ The dataset contains anonymized customer information. Typical features used incl
 - Date of Birth  
 - Balance
 - Transactions 
-- Gender 
+- Gender
+- Location
 
 > Dataset: attached as a zip file
 
@@ -36,6 +38,7 @@ The dataset contains anonymized customer information. Typical features used incl
 - **Pandas**, **NumPy** – Data manipulation
 - **Matplotlib**, **Seaborn** – Visualization
 - **Scikit-learn** – K-Means Clustering, StandardScaler
+- **FuzzyWuzzy** – Location matching and standardization
 - **Jupyter Notebook** – Interactive analysis
 
 ---
@@ -47,21 +50,26 @@ The dataset contains anonymized customer information. Typical features used incl
    - Feature selection  
    - Data normalization
    - Feature Engineering (creating new features)
+  
+2. **Fuzzy Matching for Location Data**  
+   - Used **FuzzyWuzzy** to clean and standardize locations with spelling inconsistencies  
+   - Extracted and prioritized the **top 10 most frequent or important locations**  
+   - Grouped the rest under an **"Other"** category to reduce noise and sparsity
 
-2. **Exploratory Data Analysis**  
+3. **Exploratory Data Analysis**  
    - Distribution of features  
    - Count Plots
 
-3. **K-Means Clustering**  
+4. **K-Means Clustering**  
    - Elbow Method to find optimal `k`  
    - Applying K-Means  
    - Assigning cluster labels
 
-4. **Visualization**  
+5. **Visualization**  
    - Used **PCA** for 2D cluster plotting
    - Cluster interpretation
 
-5. **Business Insights**  
+6. **Business Insights**  
    - Understanding the characteristics of each cluster  
    - Recommendations for marketing strategies
 
